@@ -23,7 +23,7 @@ def format_occurrences(use_strict:bool, occ_strict:str, occ_relaxed:str):
     if use_strict:
         rawData = pd.read_csv(occ_strict, on_bad_lines='warn', low_memory=False)
     else:
-        rawData = pd.read_csv(occ_relaxed, on_bad_lines='warn', low_memory=False)
+        rawData = pd.read_csv(occ_relaxed, on_bad_lines='warn', low_memory=False, sep='\t')
                             ## Data was downloaded on 25/03/2023 from the GBIF database 
                             ## website. The following filters were used: 'Country or area' = Brazil,
                             ## 'Scientific name' = Fungi. Reference:
